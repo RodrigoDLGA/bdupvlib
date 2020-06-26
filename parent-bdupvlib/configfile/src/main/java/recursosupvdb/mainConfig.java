@@ -11,11 +11,10 @@ public class mainConfig {
             FileReader r = new FileReader("./configfile/src/main/resources/configDB.properties");
             Properties p = new Properties();
             p.load(r);
-            System.out.println(p.getProperty("rutatxt"));
-            System.out.println(p.getProperty("rutaxlsx"));
-            System.out.println(p.getProperty("rutaconexionSQLite"));
-            System.out.println(p.getProperty("nombreconexion"));
-            System.out.println(p.getProperty("usuarioconexion"));
+            for (Object key: p.keySet()){
+                System.out.println(key + ": " + p.getProperty(key.toString()));
+            }
+            System.out.println("\nLos datos se cargaron con exito!!!\n");
         }catch (FileNotFoundException e){
             System.out.println(e.getMessage());
         } catch (IOException e) {

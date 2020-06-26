@@ -1,6 +1,7 @@
 package main.java.recursosupvdb;
 
 import com.google.gson.*;
+import org.apache.commons.collections4.Get;
 import org.apache.poi.ss.usermodel.CellType;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
@@ -10,10 +11,11 @@ import java.io.*;
 import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.Properties;
 import java.util.Scanner;
 
 public class loadrecursos {
-    public static void leerxlsx(FileInputStream filepath) throws IOException {
+    public static void leerxlsx(File filepath) throws IOException {
         try{
             FileInputStream fileinput = new FileInputStream(String.valueOf(filepath));
             XSSFWorkbook wk = new XSSFWorkbook(fileinput);
@@ -78,7 +80,8 @@ public class loadrecursos {
             e.printStackTrace();
         }
     }
-    public static void leertxt(FileInputStream filepath) throws IOException, InvocationTargetException {
+    public static void leertxt(File filepath) throws IOException, InvocationTargetException {
+        /*
         try (Scanner scanner = new Scanner(String.valueOf(filepath))) {
             scanner.useDelimiter("\\A");
             String all = scanner.next();
@@ -95,6 +98,20 @@ public class loadrecursos {
                 System.out.println("***Hubo un error al crear el archivo json***");
                 e.printStackTrace();
             }
+        }
+         */
+        try{
+            FileReader r = new FileReader(String.valueOf(filepath));
+            Properties p = new Properties();
+            p.load(r);
+            for (Object key: p.keySet()){
+                System.out.println(key + ": " + p.getProperty(key.toString()));
+            }
+            System.out.println("\nLos datos se cargaron con exito!!!\n");
+        }catch (FileNotFoundException e){
+            System.out.println(e.getMessage());
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
 }

@@ -27,7 +27,10 @@ public class mainClass {
                 if (option == 1) {
                     //URL res = mainClass.class.getClassLoader().getResource("recursosAcademicos.xlsx");
                     //File filepath = Paths.get(res.toURI()).toFile();
-                    FileInputStream filepath = new FileInputStream("./src/resources/recursosAcademicos.xlsx");
+                    //---
+                    File filepath = new File("./cargarecursos/src/main/resources/recursosAcademicos.xlsx");
+                    //---
+                    //FileInputStream filepath = new FileInputStream("./cargarecursos/src/main/resources/recursosAcademicos.xlsx");
                     loadrecursos lr = new loadrecursos();
                     lr.leerxlsx(filepath);
                     flag=1;
@@ -35,7 +38,10 @@ public class mainClass {
                     if (option == 2) {
                         //URL res = mainClass.class.getClassLoader().getResource("recursosAcademicos.txt");
                         //File filepath = Paths.get(res.toURI()).toFile();
-                        FileInputStream filepath = new FileInputStream("./src/resources/recursosAcademicos.txt");
+                        //---
+                        File filepath = new File("./cargarecursos/src/main/resources/recursosAcademicos.txt");
+                        //___
+                        //FileInputStream filepath = new FileInputStream("./cargarecursos/src/main/resources/recursosAcademicos.txt");
                         loadrecursos lr = new loadrecursos();
                         lr.leertxt(filepath);
                         flag=1;

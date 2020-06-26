@@ -1,0 +1,8 @@
+nombre_materia=Redes
+clv_materia=2321
+creditos=4
+cuatrimestre=6to
+posicion=1
+clv_plan=22312
+horas_x_semana=5
+tipo_materia=tipo1
