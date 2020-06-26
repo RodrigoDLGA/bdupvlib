@@ -1,0 +1,44 @@
+{
+  "materias": [
+    {
+      "nombre_materia": "Redes",
+      "clv_materia": 2321.0,
+      "creditos": 4.0,
+      "cuatrimestre": "6to",
+      "posicion": 1.0,
+      "clv_plan": 22312.0,
+      "horas_x_semana": 5.0,
+      "tipo_materia": "tipo1"
+    },
+    {
+      "nombre_materia": "Programacion",
+      "clv_materia": 3324.0,
+      "creditos": 5.0,
+      "cuatrimestre": "2do",
+      "posicion": 3.0,
+      "clv_plan": 23324.0,
+      "horas_x_semana": 4.0,
+      "tipo_materia": "ejemplo"
+    }
+  ],
+  "grupos": [
+    {
+      "clv_grupo": "ITI-2232",
+      "turno": "matutino"
+    },
+    {
+      "clv_grupo": "ITI-2563",
+      "turno": "despertino"
+    }
+  ],
+  "carrera": [
+    {
+      "idcarrera": 2443.0,
+      "nombre_carrera": "Mecatrónica"
+    },
+    {
+      "idcarrera": 3332.0,
+      "nombre_carrera": "Tecnologias de la informacion"
+    }
+  ]
+}
